@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Creating Book API</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- stylesheet connected -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-gray">
+    <h2 class="text-center text-info my-3">Search Your Book</h2>
+
+    <!-- Book Search -->
+    <div class="input-group mb-3 w-50 mx-auto">
+      <input
+        id="search-field"
+        type="text"
+        class="form-control"
+        placeholder="Type book Name"
+        aria-label="Recipient's username"
+        aria-describedby="button-addon2"
+      />
+      <button
+        class="btn btn-outline-secondary"
+        type="button"
+        id="search-btn"
+        onclick="searchFood()"
+      >
+        Search
+      </button>
+    </div>
+    <!-- Show Error -->
+    <h2 id="error" class="text-center text-danger"></h2>
+
+    <!-- Single Book Data -->
+    <div id="single-book-details" class="w-50 mx-auto"></div>
+
+    <!-- Book Search Result -->
+    <div
+      id="search-result"
+      class="row row-cols-1 row-cols-md-3 g-4 w-90 mx-auto mt-5"
+    ></div>
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- app.js Connected -->
+    <script src="./app.js"></script>
+  </body>
+</html>
