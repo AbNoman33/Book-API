@@ -2,15 +2,15 @@ let searchFood =() => {
     let searchField = document.getElementById('search-field');
     let searchText = searchField.value;
     searchField.value = '';
-    // if(searchText = '') {
-    //     let error = document.getElementById('error');
-    //     error.innerHTML = "Food Name is must not be empty"
-    // } else {
+     if(searchText =='') {
+         let error = document.getElementById('error');
+         error.innerHTML = "Book Name must not be empty"
+     } else {
         let url = `https://www.googleapis.com/books/v1/volumes?q=${searchText}`;
         fetch(url)
         .then(res => res.json())
         .then(data => displaySearchResult(data.items));
-    // }
+     }
     
     
 }
